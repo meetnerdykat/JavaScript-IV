@@ -14,35 +14,6 @@ Prototype Refactor
   * destroy() // prototype method that returns: `${this.name} was removed from the game.`
 */
 
-/*
-// Previous Constructor Functions-Prototypal Inheritence
-// GameObject Constructor
-function GameObject(atts) {
-  this.createdAt = atts.createdAt;
-  this.name = atts.name;
-  this.dimensions = atts.dimensions;
-}
-
-// GameObject destroy() prototype method
-GameObject.prototype.destroy = function() {
-  return `${this.name} was removed from the game.`;
-};
-// GameObject build() prototype method
-GameObject.prototype.build = function() {
-  return `${this.name} was built into the game.`;
-};
-
-// Create a new GameObject
-const game1 = new GameObject({
-  createdAt: new Date(),
-  name: 'Game1',
-  dimensions: {
-    length: 1,
-    width: 2,
-    height: 2
-  }
-});
-*/
 
 // New-Refactored
 class GameObject {
@@ -170,6 +141,7 @@ class Villian extends Humanoid {
   }
 }
 
+// New-Refactored
 const theOGV = new Villian({
   createdAt: new Date(),
   name: 'Original Gansta Villian a.k.a OGV',
@@ -242,13 +214,13 @@ const archer = new Humanoid({
   language: 'Elvish'
 });
 
-console.log(mage.createdAt); // Today's date
-console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
-console.log(swordsman.healthPoints); // 15
-console.log(mage.name); // Bruce
-console.log(swordsman.team); // The Round Table
-console.log(mage.weapons); // Staff of Shamalama
-console.log(archer.language); // Elvish
-console.log(archer.greet()); // Lilith offers a greeting in Elvish.
-console.log(mage.takeDamage()); // Bruce took damage.
-console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
+// console.log(mage.createdAt); // Today's date
+// console.log(archer.dimensions); // { length: 1, width: 2, height: 4 }
+// console.log(swordsman.healthPoints); // 15
+// console.log(mage.name); // Bruce
+// console.log(swordsman.team); // The Round Table
+// console.log(mage.weapons); // Staff of Shamalama
+// console.log(archer.language); // Elvish
+// console.log(archer.greet()); // Lilith offers a greeting in Elvish.
+// console.log(mage.takeDamage()); // Bruce took damage.
+// console.log(swordsman.destroy()); // Sir Mustachio was removed from the game.
